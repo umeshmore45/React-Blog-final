@@ -24,7 +24,6 @@ class Home extends Component {
     console.log(this.state.blog);
     return (
       <div>
-        <h1>Home Page</h1>
         {this.state.blog.map((blog) => {
           return <BlogCard key={blog.id} {...blog} />;
         })}
@@ -34,7 +33,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-// navigatePage = (event) => {
-//   this.props.history.push("/aboutus");
-// };

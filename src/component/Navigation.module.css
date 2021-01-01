@@ -1,0 +1,23 @@
+.navigation {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.li {
+  display: inline;
+  margin-left: "5%";
+}
+
+.link {
+  margin-left: "5%";
+  text-decoration: none;
+  color: white;
+}
