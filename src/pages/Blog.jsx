@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { blogUrl, fetchData } from "../apiCall/FetchData";
+import { Link } from "react-router-dom";
 
 class Blog extends Component {
   state = {
@@ -25,7 +26,7 @@ class Blog extends Component {
 
   render() {
     console.log(this.state.blog);
-    let { title, imageUrl, content } = this.state.blog;
+    let { title, imageUrl, content, links } = this.state.blog;
     return (
       <div>
         <h1>{title}</h1>
@@ -33,6 +34,20 @@ class Blog extends Component {
           <img src={imageUrl} alt={"blog" + title} />
         </div>
         <p>{content}</p>
+        {links &&
+          links.map((link) => {
+            return (
+              <div key={link.id}>
+                <Link
+                  to={{
+                    pathname: `/blog/${link.id}`,
+                  }}
+                >
+                  {link.title}
+                </Link>{" "}
+              </div>
+            );
+          })}
       </div>
     );
   }
