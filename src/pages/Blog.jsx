@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { blogUrl, fetchData } from "../apiCall/FetchData";
+import { blogUrl, fetchData } from "../Services/FetchData";
 import { Link } from "react-router-dom";
 
 class Blog extends Component {

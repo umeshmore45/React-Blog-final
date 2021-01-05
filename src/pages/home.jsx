@@ -1,5 +1,5 @@
 import { React, Component } from "react";
-import { blogUrl, fetchData } from "../apiCall/FetchData";
+import { blogUrl, fetchData } from "../Services/FetchData";
 import BlogCard from "../component/BlogCard";
 
 class Home extends Component {
@@ -21,7 +21,6 @@ class Home extends Component {
   };
 
   render() {
-    console.log(this.state.blog);
     return (
       <div>
         {this.state.blog.map((blog) => {
